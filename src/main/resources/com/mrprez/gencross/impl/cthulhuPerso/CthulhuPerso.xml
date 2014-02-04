@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personnage name="CthulhuPerso" version="1.0" gencrossVersion="1.10"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="http://mrprez.dyndns.org:8080/gencross-web/gencross-plugin.xsd"> 
+	<phase name="Métier"/>
+	<phaseList>
+		<phase name="Métier"/>
+		<phase name="Compétences"/>
+		<phase name="Investigation"/>
+	</phaseList>
+	<pointPools>
+		<pool name="Caractéristiques" remaining="56" total="56"/>
+		<pool name="Métier" remaining="130" toEmpty="true" total="130"/>
+		<pool name="Compétences" remaining="270" total="270"/>
+	</pointPools>
+	<properties>
+		<property editable="true" name="Investigateur">
+			<Value class="com.mrprez.gencross.value.StringValue"/>
+		</property>
+		<property editable="true" name="Né le">
+			<Value class="com.mrprez.gencross.value.StringValue"/>
+		</property>
+		<property editable="true" name="Profession">
+			<Value class="com.mrprez.gencross.value.StringValue"/>
+		</property>
+		<property editable="true" name="Diplômes">
+			<Value class="com.mrprez.gencross.value.StringValue"/>
+		</property>
+		<property editable="true" name="Phobies">
+			<Value class="com.mrprez.gencross.value.StringValue"/>
+		</property>
+		<property editable="false" name="Caractéristiques">
+			<propertiesList fixe="true" open="false">
+				<properties>
+					<property editable="true" name="FOR">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">18</Value>
+						</max>
+					</property>
+					<property editable="true" name="APP">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">18</Value>
+						</max>
+					</property>
+					<property editable="true" name="INT">
+						<Value class="com.mrprez.gencross.value.IntValue">8</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">8</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">18</Value>
+						</max>
+					</property>
+					<property editable="true" name="CON">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">18</Value>
+						</max>
+					</property>
+					<property editable="true" name="DEX">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">18</Value>
+						</max>
+					</property>
+					<property editable="true" name="POU">
+						<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">3</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">18</Value>
+						</max>
+					</property>
+					<property editable="true" name="TAI">
+						<Value class="com.mrprez.gencross.value.IntValue">8</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">8</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">18</Value>
+						</max>
+					</property>
+					<property editable="false" name="SAN">
+						<Value class="com.mrprez.gencross.value.IntValue">15</Value>
+					</property>
+					<property editable="true" name="EDU">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">21</Value>
+						</max>
+					</property>
+				</properties>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>Caractéristiques</pointPool>
+				<args></args>
+			</historyFactory>
+		</property>
+		<property name="Compétences" editable="false">
+			<propertiesList fixe="false" open="true">
+				<properties>
+					<property name="Anthropologie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Archeologie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Astronomie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Baratin" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Bibliotheque" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Botanique" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Camouflage" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Cartographie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Chanter" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Chimie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Comptabilite" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Cond. auto" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Cond. engin lourd" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Credit" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">15</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">15</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Diagno. maladie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Discretion" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Discussion" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Droit" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Ecouter" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Electricite" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Eloquence" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Equitation" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Escalade" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">40</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">40</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Esquiver" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Geologie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Histoire" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Lancer" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Lire/ecrire" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Lire/ecrire Latin" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Lire/ecrire" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Marchandage" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Mecanique" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Mythe" editable="false">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Nager" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Occultisme" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Parler langue" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Parler langue" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Parler langue" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Pharmacologie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Photo" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Pick pocket" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Piloter avion" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Prem. soins" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">30</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">30</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Psychanalyse" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Psychologie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Sauter" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Se cacher" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Soigner empoisonnement" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Soigner maladie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">5</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Suivre piste" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Toc" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Zoologie" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">1</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Arme de poing" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">20</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Fusil" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Fusil de chasse" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">30</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">30</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Coup de pied" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Coup de poing" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">50</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">50</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Coup de tête" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">10</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+					<property name="Lutte" editable="true">
+						<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">25</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+				</properties>
+				<propertyChoice>
+					<property name="Langues" editable="true" specification="">
+						<Value class="com.mrprez.gencross.value.IntValue">01</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">01</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+				</propertyChoice>
+				<defaultProperty>
+					<property editable="true" name="???">
+						<Value class="com.mrprez.gencross.value.IntValue">01</Value>
+						<min>
+							<Value class="com.mrprez.gencross.value.IntValue">01</Value>
+						</min>
+						<max>
+							<Value class="com.mrprez.gencross.value.IntValue">99</Value>
+						</max>
+					</property>
+				</defaultProperty>
+			</propertiesList>
+			<historyFactory class="com.mrprez.gencross.history.ProportionalHistoryFactory">
+				<pointPool>Métier</pointPool>
+				<args>
+					<arg key="startValue">1</arg>
+				</args>
+			</historyFactory>
+		</property>
+	</properties>
+	<beforeChangeValueListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomBeforeChangeValueListener">
+			<pattern>Compétences#[^#]*</pattern>
+			<arg name="method">changeMetierComp</arg>
+		</listener>
+	</beforeChangeValueListeners>
+	<afterChangeValueListeners/>
+	<beforeAddPropertyListeners/>
+	<afterAddPropertyListeners/>
+	<beforeDeletePropertyListeners/>
+	<afterDeletePropertyListeners/>
+	<passToNextPhaseListeners>
+		<listener class="com.mrprez.gencross.listener.custom.CustomPassToNextPhaseListener">
+			<phase>Métier</phase>
+			<arg name="method">passToCompetencePhase</arg>
+		</listener>
+	</passToNextPhaseListeners>
+	<formulas>
+		<formula>Caractéristiques#SAN=#Caractéristiques#POU# * 5</formula>
+	</formulas>
+	<history/>
+</personnage>
